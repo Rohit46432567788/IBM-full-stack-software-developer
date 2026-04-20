@@ -1,39 +1,24 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-import { AppProvider } from "./context/AppContext";
-import CartValue from "./components/CartValue";
-import ExpenseList from "./components/ExpenseList";
-import ItemSelected from "./components/ItemSelected";
-import Location from "./components/Location";
-
-const App = () => {
+function App() {
   return (
-    <AppProvider>
-      <div className="container">
-        <h1 className="mt-3">Shopping App</h1>
-        <div className="row mt-3">
-          <div className="col-sm">
-            <CartValue />
-          </div>
-          <div className="col-sm">
-            <Location />
-          </div>
-        </div>
-        <h3 className="mt-3">Shopping Cart</h3>
-        <div className="row ">
-          <div className="col-sm">
-            <ExpenseList />
-          </div>
-        </div>
-        <h3 className="mt-3">Add Items</h3>
-        <div className="row mt-3">
-          <div className="col-sm">
-            <ItemSelected />
-          </div>
-        </div>
-      </div>
-    </AppProvider>
+    <div style={{ textAlign: "center", paddingTop: "100px" }}>
+      <h1>🌿 Paradise Nursery</h1>
+      <p>Welcome to your one-stop plant shop</p>
+
+      <button
+        style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          cursor: "pointer",
+        }}
+        onClick={() => alert("Get Started")}
+      >
+        Get Started
+      </button>
+    </div>
   );
-};
+}
+
 export default App;
